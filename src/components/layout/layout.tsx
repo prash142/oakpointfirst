@@ -7,9 +7,14 @@ import { Footer } from "./footer";
 import icon from "../../../static/logo.png";
 
 const logo = <img className="w-auto h-15" src={icon} alt="Workflow" />;
+const companyName = <p>Oakpoint Trading Inc.</p>
 const menuItems: MenuItem[] = [
   {
     label: "Home",
+    href: "/",
+  },
+  {
+    label: "Our Team",
     href: "/",
   },
   {
@@ -19,10 +24,11 @@ const menuItems: MenuItem[] = [
 ];
 
 const footer = {
-  copyrightOwner: "GEEK SG",
-  linkedin: "https://www.linkedin.com/in/raymondyeh/",
-  github: "https://github.com/yehjxraymond",
-  instagram: "https://www.instagram.com/geek.sg/",
+  copyrightOwner: "Oakpoint Trading Inc.",
+  //linkedin: "https://www.linkedin.com/in/raymondyeh/",
+  //github: "https://github.com/yehjxraymond",
+  //instagram: "https://www.instagram.com/geek.sg/",
+  email: "mail-to:prashanth.guha@gmail.com"
 };
 
 export const Layout: FunctionComponent = ({ children }) => {

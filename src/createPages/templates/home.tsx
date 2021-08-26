@@ -4,8 +4,6 @@ import { FluidObject } from "gatsby-image";
 import { Layout } from "../../components/layout";
 import { PostSnippet } from "../../types";
 import { FeaturePosts } from "../../components/featurePosts";
-import { RecentPosts } from "../../components/recentPosts";
-import { Pagination } from "../../components/pagination";
 import { SEO } from "../../components/seo";
 
 export const pageQuery = graphql`
@@ -14,33 +12,6 @@ export const pageQuery = graphql`
       limit: 4
       sort: { fields: [frontmatter___publishedDate], order: DESC }
       filter: { frontmatter: { featured: { eq: true } } }
-    ) {
-      edges {
-        node {
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            tags
-            title
-            imgAlt
-            description
-            publishedDate
-            img {
-              childImageSharp {
-                fluid(maxWidth: 2400, quality: 90) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-    recentPosts: allMarkdownRemark(
-      limit: 10
-      sort: { fields: [frontmatter___publishedDate], order: DESC }
     ) {
       edges {
         node {
@@ -89,9 +60,6 @@ interface QueryData {
   featuredPosts: {
     edges: Post[];
   };
-  recentPosts: {
-    edges: Post[];
-  };
 }
 
 interface Home {
@@ -111,14 +79,11 @@ const Home: FunctionComponent<Home> = ({ data }) => {
   const featuredPostData: PostSnippet[] = data.featuredPosts.edges.map(
     mapPostData
   );
-  const recentPostData: PostSnippet[] = data.recentPosts.edges.map(mapPostData);
   return (
     <>
       <SEO title="Home" image="/logo.png"/>
       <Layout>
         <FeaturePosts featurePosts={featuredPostData} />
-        <RecentPosts recentPosts={recentPostData} />
-        <Pagination next="/page/2" />
       </Layout>
     </>
   );

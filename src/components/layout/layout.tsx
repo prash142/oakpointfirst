@@ -7,15 +7,15 @@ import { Footer } from "./footer";
 import icon from "../../../static/logo.png";
 
 const logo = <img className="w-auto h-15" src={icon} alt="Workflow" />;
-const companyName = <p>Oakpoint Trading Inc.</p>
+const companyName = <p>Oakstone Trading Ltd.</p>
 const menuItems: MenuItem[] = [
   {
     label: "Home",
     href: "/",
   },
   {
-    label: "Our Team",
-    href: "/",
+    label: "About Us",
+    href: "/aboutus",
   },
   {
     label: "Contact",
@@ -24,11 +24,11 @@ const menuItems: MenuItem[] = [
 ];
 
 const footer = {
-  copyrightOwner: "Oakpoint Trading Inc.",
+  copyrightOwner: "Oakstone Trading Ltd.",
   //linkedin: "https://www.linkedin.com/in/raymondyeh/",
   //github: "https://github.com/yehjxraymond",
   //instagram: "https://www.instagram.com/geek.sg/",
-  email: "mail-to:prashanth.guha@gmail.com"
+  email: "mail-to:info@oakstonetrading.com"
 };
 
 export const Layout: FunctionComponent = ({ children }) => {

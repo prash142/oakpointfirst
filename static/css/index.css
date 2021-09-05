@@ -2347,8 +2347,8 @@ video {
   font-weight: 600;
 }
 
-.font-extrabold {
-  font-weight: 800;
+.font-bold {
+  font-weight: 700;
 }
 
 .h-5 {
@@ -2377,10 +2377,6 @@ video {
 
 .text-base {
   font-size: 1rem;
-}
-
-.text-lg {
-  font-size: 1.125rem;
 }
 
 .text-xl {
@@ -2506,10 +2502,6 @@ video {
   margin-top: 2rem;
 }
 
-.mb-8 {
-  margin-bottom: 2rem;
-}
-
 .mt-9 {
   margin-top: 2.25rem;
 }
@@ -2548,10 +2540,6 @@ video {
 
 .max-w-7xl {
   max-width: 80rem;
-}
-
-.max-w-prose {
-  max-width: 65ch;
 }
 
 .max-w-screen-lg {
@@ -2692,6 +2680,10 @@ video {
 
 .focus\:shadow-outline-indigo:focus {
   box-shadow: 0 0 0 3px rgba(180, 198, 252, 0.45);
+}
+
+.text-left {
+  text-align: left;
 }
 
 .text-center {
@@ -4264,8 +4256,8 @@ video {
     font-size: 0.875rem;
   }
 
-  .sm\:text-4xl {
-    font-size: 2.25rem;
+  .sm\:text-2xl {
+    font-size: 1.5rem;
   }
 
   .sm\:text-5xl {

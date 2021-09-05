@@ -50,7 +50,9 @@ export const createPages = async ({
 
   createPage({
     path: "/",
-    component: path.resolve(`src/createPages/templates/home.tsx`),
+    //component: path.resolve(`src/createPages/templates/home.tsx`),
+    component: path.resolve(`src/createPages/templates/homepage.tsx`),
+    //component: path.resolve(`src/pages/mainpage.tsx`),
     context: {},
   });
 

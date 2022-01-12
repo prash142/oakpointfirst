@@ -46,8 +46,10 @@ export const NotFound: FunctionComponent = () => {
       <div className="relative bg-white mt-2">
         <div className="hidden lg:block lg:absolute lg:inset-0">
           <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+            {/* className="h-56 w-full object-cover lg:absolute lg:h-full" */}
             <img
-              className="h-56 w-full object-cover lg:absolute lg:h-full"
+              width="100%"
+              height="auto"
               src="/contact.png"
               alt=""
             />
@@ -61,6 +63,9 @@ export const NotFound: FunctionComponent = () => {
               </h4>
               <p>Ph: +255689669971</p>
               <p>Email: <a href="mailto:info@oakstonetrading.com">info@oakstonetrading.com</a></p>
+              <br></br>
+              <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdObI_RAZmJLc-1C5gFDIMhJUORHW-BLZac-oUuLUUrAkNDeg/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0" height="812" width="100%" scrolling="no">Loading…</iframe>
+              {/*
               <h4 className="text-2xl leading-9 font-bold tracking-tight sm:text-2xl sm:leading-10">
                 Send us a message!
               </h4>
@@ -181,6 +186,7 @@ export const NotFound: FunctionComponent = () => {
                   </span>
                 </div>
               </form>
+              */}
             </div>
           </div>
         </div>
